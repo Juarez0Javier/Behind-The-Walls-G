@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://kob8qet323yl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46faf"]
+albedo_color = Color(0.2016, 0.48, 0.31760004, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_46faf"]
+material = SubResource("StandardMaterial3D_46faf")
+top_radius = 0.35
+bottom_radius = 0.35
+height = 1.0
+radial_segments = 10
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kye67"]
+height = 1.0041504
+radius = 0.3359375
+
+[node name="Planta Mesh" type="MeshInstance3D" unique_id=1163216953]
+mesh = SubResource("CylinderMesh_46faf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=464386117]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=438572699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005493164, 0)
+shape = SubResource("CylinderShape3D_kye67")

@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://duu70rf7aqddm"]
+
+[ext_resource type="Texture2D" uid="uid://qis55hbcxv65" path="res://3D Assets/Lamp/Lamp_0.png" id="1_nfe2w"]
+[ext_resource type="Texture2D" uid="uid://c6khmjwriay5i" path="res://3D Assets/Lamp/Lamp_2.png" id="2_0i65d"]
+[ext_resource type="Texture2D" uid="uid://cgxybhkwrhnd" path="res://3D Assets/Lamp/Lamp_1.png" id="3_621i7"]
+[ext_resource type="Texture2D" uid="uid://b7q7ry5a4ic4g" path="res://3D Assets/Lamp/Lamp_3.png" id="4_3it3d"]
+
+[resource]
+resource_name = "Scene_-_Root"
+cull_mode = 2
+albedo_texture = ExtResource("1_nfe2w")
+metallic = 1.0
+metallic_texture = ExtResource("3_621i7")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_621i7")
+roughness_texture_channel = 1
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 1.8742914
+emission_operator = 1
+emission_texture = ExtResource("2_0i65d")
+normal_enabled = true
+normal_texture = ExtResource("4_3it3d")
+metadata/_gltf_primary_texture_coord = 0

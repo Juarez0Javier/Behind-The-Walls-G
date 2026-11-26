@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8q81a6jxi8wj"]
+
+[resource]
+resource_name = "updownbutton"
+cull_mode = 2
+albedo_color = Color(0.15478961, 0.15478961, 0.15478961, 1)
+roughness = 0.82111454
+emission = Color(0.8064275, 0.7688876, 0.2555648, 1)

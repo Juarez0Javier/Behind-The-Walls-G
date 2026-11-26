@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dywhbf6okl5rg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_threo"]
+albedo_color = Color(0.84321153, 0.4851796, 0.18289328, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1cwr0"]
+material = SubResource("StandardMaterial3D_threo")
+size = Vector3(1.5, 2.5, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kye67"]
+size = Vector3(1.5215454, 2.4980469, 1.4953003)
+
+[node name="Ascensor Mesh" type="MeshInstance3D" unique_id=216551906]
+mesh = SubResource("BoxMesh_1cwr0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1821202199]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=266046362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004547119, -0.0043945313, -0.009002686)
+shape = SubResource("BoxShape3D_kye67")

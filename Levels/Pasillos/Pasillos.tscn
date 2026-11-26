@@ -1,0 +1,390 @@
+[gd_scene format=3 uid="uid://oj3j80nfk3qc"]
+
+[ext_resource type="Script" uid="uid://dngemiqamwb3" path="res://Levels/Pasillos/lv_pasillos.gd" id="1_5713g"]
+[ext_resource type="PackedScene" uid="uid://cywfv8i530ish" path="res://Characters/PC.tscn" id="2_bdlrj"]
+[ext_resource type="PackedScene" uid="uid://dqp7nglyaa338" path="res://Build Objects/Pasillos/PasilloLuzPuertas.tscn" id="3_5pu67"]
+[ext_resource type="PackedScene" uid="uid://uju2xrgybaup" path="res://Build Objects/Pasillos/PasilloPuertas.tscn" id="4_vy7kn"]
+[ext_resource type="PackedScene" uid="uid://c7bid5ewqhhas" path="res://Build Objects/Pasillos/Esquina.tscn" id="5_slqxp"]
+[ext_resource type="PackedScene" uid="uid://c7guk65ooat1l" path="res://Build Objects/Pasillos/EsquinaInversa.tscn" id="6_q43hc"]
+[ext_resource type="PackedScene" uid="uid://cp0xdg46mame4" path="res://Build Objects/Pasillos/BifurcacionLuzPuerta.tscn" id="7_y828d"]
+[ext_resource type="PackedScene" uid="uid://cvhe7r6igni25" path="res://Build Objects/Pasillos/EscalerasParedes.tscn" id="9_k3fi3"]
+[ext_resource type="Script" uid="uid://bq065ln6diovq" path="res://Build Objects/Interactable/Teleporter/alter_teleporter.gd" id="10_5pu67"]
+[ext_resource type="PackedScene" uid="uid://dogwgenkwokj7" path="res://Build Objects/Escalera.tscn" id="10_tur41"]
+[ext_resource type="PackedScene" uid="uid://xrjv6w2yafv2" path="res://Build Objects/Pasillos/PasillosAscensor.tscn" id="11_3p17h"]
+[ext_resource type="PackedScene" uid="uid://ki1024e3gyrd" path="res://Build Objects/Shadows.tscn" id="12_q6lr7"]
+[ext_resource type="PackedScene" uid="uid://bru6crp06idri" path="res://Build Objects/Interactable/Teleporter/Teleporter.tscn" id="13_bdlrj"]
+[ext_resource type="PackedScene" uid="uid://b6g4ipigr27ge" path="res://Build Objects/Pasillos/PasilloAscensorCerrado.tscn" id="14_5pu67"]
+[ext_resource type="PackedScene" uid="uid://e6tgjv307m2y" path="res://Build Objects/Pasillos/PasilloLuzPuertasCerrado.tscn" id="14_vy7kn"]
+[ext_resource type="PackedScene" uid="uid://5iel25rnfgkf" path="res://Build Objects/Pasillos/Pasillo.tscn" id="15_slqxp"]
+[ext_resource type="PackedScene" uid="uid://b5ruukfxybnl0" path="res://Build Objects/Pasillos/ANivel/PasilloALavadero.tscn" id="16_slqxp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xghbh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_a5cvy"]
+sky_material = SubResource("ProceduralSkyMaterial_xghbh")
+
+[sub_resource type="Environment" id="Environment_3qmxl"]
+background_mode = 2
+sky = SubResource("Sky_a5cvy")
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_depth_curve = 1.1486983
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpmqn"]
+emission_enabled = true
+emission = Color(0.16999999, 0.5, 0.18099996, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_51eye"]
+material = SubResource("StandardMaterial3D_wpmqn")
+size = Vector3(1.0654297, 1, 1.0712891)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rtvg0"]
+
+[node name="Pasillos" type="Node3D" unique_id=614963]
+script = ExtResource("1_5713g")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=277076502]
+environment = SubResource("Environment_3qmxl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=324848645]
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, -0.20502664, -0.14849076, -0.9674268, 0.45603088, -0.8890728, 0.03981766, 0, -9.237862, 0)
+visible = false
+light_color = Color(0.52688, 0.580756, 0.59545714, 1)
+light_volumetric_fog_energy = 10.0
+light_specular = 1.37
+shadow_enabled = true
+
+[node name="PC" parent="." unique_id=942135061 instance=ExtResource("2_bdlrj")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 13.686111, 0.075499535, -0.5706711)
+
+[node name="Base Floor" type="MeshInstance3D" parent="." unique_id=1984076057]
+transform = Transform3D(68.88402, 0, 0, 0, 0.075, 0, 0, 0, 53.693855, -5.141014, -27.249186, 1.5385433)
+mesh = SubResource("BoxMesh_51eye")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Base Floor" unique_id=43881579]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base Floor/StaticBody3D" unique_id=1832638210]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_rtvg0")
+
+[node name="Base Floor2" type="MeshInstance3D" parent="." unique_id=207364695]
+transform = Transform3D(68.88402, 0, 0, 0, 0.075, 0, 0, 0, 53.693855, -5.141014, 35.269302, 1.5385433)
+mesh = SubResource("BoxMesh_51eye")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Base Floor2" unique_id=1124218742]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base Floor2/StaticBody3D" unique_id=1260508951]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_rtvg0")
+
+[node name="Pasillo Principal" type="Node3D" parent="." unique_id=910699899]
+
+[node name="Pasillo Composite5" parent="Pasillo Principal" unique_id=1358984194 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="Pasillo Composite6" parent="Pasillo Principal" unique_id=1384393383 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+
+[node name="Pasillo Composite7" parent="Pasillo Principal" unique_id=948998881 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="Pasillo Composite2" parent="Pasillo Principal" unique_id=245666270 instance=ExtResource("3_5pu67")]
+
+[node name="Pasillo Composite" parent="Pasillo Principal" unique_id=247715623 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Pasillo Composite3" parent="Pasillo Principal" unique_id=977466920 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="Pasillo Composite4" parent="Pasillo Principal" unique_id=187971302 instance=ExtResource("3_5pu67")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.5, 0, 4.5)
+
+[node name="Pasillo Composite8" parent="Pasillo Principal" unique_id=1106495946 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.5, 0, 8.5)
+
+[node name="Esquina" parent="Pasillo Principal" unique_id=1412560364 instance=ExtResource("5_slqxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 0)
+
+[node name="Pasillo Composite9" parent="Pasillo Principal" unique_id=1902785550 instance=ExtResource("3_5pu67")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -24.5, 0, -4.5)
+
+[node name="Pasillo Composite10" parent="Pasillo Principal" unique_id=398438879 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.5, 0, -8.5)
+
+[node name="Esquina2" parent="Pasillo Principal" unique_id=119452926 instance=ExtResource("5_slqxp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -24.5, 0, 0)
+
+[node name="Primer Pasillo Lateral" type="Node3D" parent="." unique_id=1490865440]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0, 0)
+
+[node name="TeleporterSur" parent="Primer Pasillo Lateral" unique_id=749303935 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.5, 0, 8.500002)
+tpPoint = NodePath("../../Segundo Pasillo Lateral/TeleporterSur")
+
+[node name="TeleporterNorte" parent="Primer Pasillo Lateral" unique_id=1867786354 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.499998, 0, 17.5)
+tpPoint = NodePath("../../Segundo Pasillo Lateral/TeleporterNorte")
+
+[node name="Esquina" parent="Primer Pasillo Lateral" unique_id=624080462 instance=ExtResource("6_q43hc")]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 3.4999995, 0, 12.999996)
+
+[node name="Pasillo Composite8" parent="Primer Pasillo Lateral" unique_id=363949247 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.9999995, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 16.999998, 0, 12.999998)
+
+[node name="Bifurcacion" parent="Primer Pasillo Lateral" unique_id=1329891468 instance=ExtResource("7_y828d")]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 12.5, 0, 13)
+
+[node name="Pasillo Composite9" parent="Primer Pasillo Lateral" unique_id=1382521648 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999946, 0, 0, 0, 1, 0, 0, 0, 0.99999946, 7.9999995, 0, 12.999998)
+
+[node name="EsquinaDerecha" parent="Primer Pasillo Lateral" unique_id=1097626689 instance=ExtResource("5_slqxp")]
+transform = Transform3D(-4.3711356e-08, 0, -0.9999993, 0, 1, 0, 0.9999993, 0, -4.3711356e-08, 21.5, 0, 13)
+
+[node name="Pasillo Composite10" parent="Primer Pasillo Lateral" unique_id=1799536678 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 21.5, 0, 8.5)
+
+[node name="Pasillo Composite11" parent="Primer Pasillo Lateral" unique_id=1336008767 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.3711367e-08, 0, 0.9999997, 0, 1, 0, -0.9999997, 0, -4.3711367e-08, 3.5, 0, 17.5)
+
+[node name="EsquinaDerecha2" parent="Primer Pasillo Lateral" unique_id=2989114 instance=ExtResource("5_slqxp")]
+transform = Transform3D(1.1924875e-08, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, 1.1924875e-08, 21.5, 0, 4)
+
+[node name="Pasillo Composite12" parent="Primer Pasillo Lateral" unique_id=1604046570 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999934, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 0.99999934, 26, 0, 4)
+
+[node name="Esquina2" parent="Primer Pasillo Lateral" unique_id=1718556795 instance=ExtResource("6_q43hc")]
+transform = Transform3D(-0.9999996, 0, 8.742274e-08, 0, 1, 0, -8.742274e-08, 0, -0.9999996, 3.5, 0, 22)
+
+[node name="Pasillo Composite13" parent="Primer Pasillo Lateral" unique_id=1387693690 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999917, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 0.99999917, -1, 0, 22)
+
+[node name="Segundo Pasillo Lateral" type="Node3D" parent="." unique_id=664181387]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -12, 0, 0)
+
+[node name="TeleporterSur" parent="Segundo Pasillo Lateral" unique_id=70811376 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 21.5, 0, 8.500002)
+tpPoint = NodePath("../../Primer Pasillo Lateral/TeleporterSur")
+
+[node name="TeleporterNorte" parent="Segundo Pasillo Lateral" unique_id=888820762 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.499998, 0, 17.5)
+tpPoint = NodePath("../../Primer Pasillo Lateral/TeleporterNorte")
+
+[node name="Esquina" parent="Segundo Pasillo Lateral" unique_id=126219143 instance=ExtResource("6_q43hc")]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 3.4999995, 0, 12.999996)
+
+[node name="Pasillo Composite8" parent="Segundo Pasillo Lateral" unique_id=578623077 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.9999995, 0, 0, 0, 1, 0, 0, 0, 0.9999995, 16.999998, 0, 12.999998)
+
+[node name="Bifurcacion" parent="Segundo Pasillo Lateral" unique_id=1329426114 instance=ExtResource("7_y828d")]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 12.5, 0, 13)
+
+[node name="Pasillo Composite9" parent="Segundo Pasillo Lateral" unique_id=566223491 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999946, 0, 0, 0, 1, 0, 0, 0, 0.99999946, 7.9999995, 0, 12.999998)
+
+[node name="EsquinaDerecha" parent="Segundo Pasillo Lateral" unique_id=597091768 instance=ExtResource("5_slqxp")]
+transform = Transform3D(-4.3711356e-08, 0, -0.9999993, 0, 1, 0, 0.9999993, 0, -4.3711356e-08, 21.5, 0, 13)
+
+[node name="Pasillo Composite10" parent="Segundo Pasillo Lateral" unique_id=146094760 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 21.5, 0, 8.5)
+
+[node name="Pasillo Composite11" parent="Segundo Pasillo Lateral" unique_id=890637566 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(-4.3711367e-08, 0, 0.9999997, 0, 1, 0, -0.9999997, 0, -4.3711367e-08, 3.5, 0, 17.5)
+
+[node name="EsquinaDerecha2" parent="Segundo Pasillo Lateral" unique_id=876966146 instance=ExtResource("5_slqxp")]
+transform = Transform3D(1.1924875e-08, 0, 0.99999917, 0, 1, 0, -0.99999917, 0, 1.1924875e-08, 21.5, 0, 4)
+
+[node name="Pasillo Composite12" parent="Segundo Pasillo Lateral" unique_id=1265473376 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999934, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 0.99999934, 26, 0, 4)
+
+[node name="Esquina2" parent="Segundo Pasillo Lateral" unique_id=1216233936 instance=ExtResource("6_q43hc")]
+transform = Transform3D(-0.9999996, 0, 8.742274e-08, 0, 1, 0, -8.742274e-08, 0, -0.9999996, 3.5, 0, 22)
+
+[node name="Pasillo Composite13" parent="Segundo Pasillo Lateral" unique_id=390352636 instance=ExtResource("4_vy7kn")]
+transform = Transform3D(0.99999917, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 0.99999917, -1, 0, 22)
+
+[node name="Pasillo Facade" type="Node3D" parent="." unique_id=535939884]
+
+[node name="Pasillo Composite11" parent="Pasillo Facade" unique_id=57797722 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -5.05, 0.005)
+
+[node name="Pasillo Composite12" parent="Pasillo Facade" unique_id=2111418507 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.05, 0)
+
+[node name="Pasillo Composite13" parent="Pasillo Facade" unique_id=843425252 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 5.05, 0.005)
+
+[node name="Pasillo Composite14" parent="Pasillo Facade" unique_id=1203991041 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.05, 0)
+
+[node name="Escalera y Facade" type="Node3D" parent="." unique_id=541511411]
+
+[node name="Escalera Paredes" type="Node3D" parent="Escalera y Facade" unique_id=1264437796]
+
+[node name="EscalerasParedes" parent="Escalera y Facade/Escalera Paredes" unique_id=179026531 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 4.5)
+
+[node name="EscalerasParedes2" parent="Escalera y Facade/Escalera Paredes" unique_id=1764709594 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5.05, 4.5)
+
+[node name="EscalerasParedes7" parent="Escalera y Facade/Escalera Paredes" unique_id=205448046 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 10.1, 4.5)
+
+[node name="EscalerasParedes3" parent="Escalera y Facade/Escalera Paredes" unique_id=1182877547 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -5.05, 4.5)
+
+[node name="EscalerasParedes4" parent="Escalera y Facade/Escalera Paredes" unique_id=472060329 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -10.1, 4.5)
+
+[node name="Escalera Composite" parent="Escalera y Facade" unique_id=1164645590 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.003991455, 0, -0.99999213, 0, 1, 0, 0.99999213, 0, 0.003991455, -6, -5.1, 5.875)
+
+[node name="TeleporterLower" parent="Escalera y Facade/Escalera Composite" unique_id=1145737599 node_paths=PackedStringArray("alterTPPoint", "tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(-0.99999976, 0, -8.7422755e-08, 0, 1, 0, 8.7422755e-08, 0, -0.99999976, 0, 3.335, 1.45)
+script = ExtResource("10_5pu67")
+alterTPPoint = NodePath("../../../Lv1AlterPoint/FirstFacade/Escalera Composite3/TeleporterUpper")
+tpCycles = 2
+tpPoint = NodePath("../../Escalera Composite3/TeleporterUpper")
+
+[node name="Escalera Composite2" parent="Escalera y Facade" unique_id=1511836987 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, -6, 5.1, 5.875)
+
+[node name="Escalera Composite9" parent="Escalera y Facade" unique_id=1827194517 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, -6, 10.15, 5.875)
+
+[node name="Escalera Composite3" parent="Escalera y Facade" unique_id=108257830 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, -6, -0.05, 5.875)
+
+[node name="TeleporterUpper" parent="Escalera y Facade/Escalera Composite3" unique_id=1354814402 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(0.99999976, 0, -9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 0.99999976, 0, 3.335, 1.45)
+tpPoint = NodePath("../../Escalera Composite/TeleporterLower")
+
+[node name="Escalera Composite4" parent="Escalera y Facade" unique_id=2052776978 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.003991455, 0, -0.99999213, 0, 1, 0, 0.99999213, 0, 0.003991455, -6, -10.15, 5.875)
+
+[node name="PasillosAscensor" parent="Escalera y Facade" unique_id=678358693 instance=ExtResource("11_3p17h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="PasillosAscensor2" parent="Escalera y Facade" unique_id=1968923496 instance=ExtResource("11_3p17h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5.05, 0)
+
+[node name="PasillosAscensor3" parent="Escalera y Facade" unique_id=1607107293 instance=ExtResource("11_3p17h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -5.05, 0)
+
+[node name="Shadow Block" type="Node3D" parent="." unique_id=1096769472]
+
+[node name="Shadows" parent="Shadow Block" unique_id=1976023083 instance=ExtResource("12_q6lr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.146179, -13.681187, 5.0923023)
+
+[node name="Shadows2" parent="Shadow Block" unique_id=1176963689 instance=ExtResource("12_q6lr7")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, -6.146179, 18.048336, 5.0923023)
+
+[node name="Lv1AlterPoint" type="Node3D" parent="." unique_id=1635217469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+
+[node name="FirstFacade" type="Node3D" parent="Lv1AlterPoint" unique_id=912938922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.336708, 0, 0)
+
+[node name="LockTeleporter" parent="Lv1AlterPoint/FirstFacade" unique_id=1166927461 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0, 1.8)
+tpPoint = NodePath("../../SecondFacade/OutLockTeleporter")
+
+[node name="Pasillo Composite" parent="Lv1AlterPoint/FirstFacade" unique_id=1837260489 instance=ExtResource("14_vy7kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Pasillo Composite2" parent="Lv1AlterPoint/FirstFacade" unique_id=1089424171 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="EscalerasParedes" parent="Lv1AlterPoint/FirstFacade" unique_id=689127089 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+
+[node name="EscalerasParedes2" parent="Lv1AlterPoint/FirstFacade" unique_id=1489531053 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.05, 4.5)
+
+[node name="EscalerasParedes7" parent="Lv1AlterPoint/FirstFacade" unique_id=721548122 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.1, 4.5)
+
+[node name="EscalerasParedes3" parent="Lv1AlterPoint/FirstFacade" unique_id=807161248 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.05, 4.5)
+
+[node name="EscalerasParedes4" parent="Lv1AlterPoint/FirstFacade" unique_id=1569309088 instance=ExtResource("9_k3fi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.1, 4.5)
+
+[node name="Escalera Composite" parent="Lv1AlterPoint/FirstFacade" unique_id=45384648 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.003991455, 0, -0.99999213, 0, 1, 0, 0.99999213, 0, 0.003991455, 0, -5.1, 5.875)
+
+[node name="Escalera Composite2" parent="Lv1AlterPoint/FirstFacade" unique_id=1678293593 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, 0, 5.1, 5.875)
+
+[node name="Escalera Composite9" parent="Lv1AlterPoint/FirstFacade" unique_id=1277153673 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, 0, 10.15, 5.875)
+
+[node name="Escalera Composite3" parent="Lv1AlterPoint/FirstFacade" unique_id=813447995 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.0039914544, 0, -0.9999921, 0, 1, 0, 0.9999921, 0, 0.0039914544, 0, -0.05, 5.875)
+
+[node name="TeleporterUpper" parent="Lv1AlterPoint/FirstFacade/Escalera Composite3" unique_id=1956594208 node_paths=PackedStringArray("tpPoint") instance=ExtResource("13_bdlrj")]
+transform = Transform3D(0.9999997, 0, -9.313226e-10, 0, 1, 0, 9.313226e-10, 0, 0.9999997, 0, 3.335, 1.45)
+tpPoint = NodePath("../../../../Escalera y Facade/Escalera Composite/TeleporterLower")
+
+[node name="Escalera Composite4" parent="Lv1AlterPoint/FirstFacade" unique_id=761758402 instance=ExtResource("10_tur41")]
+transform = Transform3D(0.003991455, 0, -0.99999213, 0, 1, 0, 0.99999213, 0, 0.003991455, 0, -10.15, 5.875)
+
+[node name="PasillosAscensor" parent="Lv1AlterPoint/FirstFacade" unique_id=1607015027 instance=ExtResource("11_3p17h")]
+
+[node name="PasillosAscensor2" parent="Lv1AlterPoint/FirstFacade" unique_id=1821221586 instance=ExtResource("11_3p17h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.05, 0)
+
+[node name="PasillosAscensor3" parent="Lv1AlterPoint/FirstFacade" unique_id=1484222424 instance=ExtResource("11_3p17h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.05, 0)
+
+[node name="Pasillo Composite3" parent="Lv1AlterPoint/FirstFacade" unique_id=289760045 instance=ExtResource("15_slqxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Shadows" parent="Lv1AlterPoint/FirstFacade" unique_id=996694783 instance=ExtResource("12_q6lr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.681187, 5.0923023)
+
+[node name="Shadows2" parent="Lv1AlterPoint/FirstFacade" unique_id=212647532 instance=ExtResource("12_q6lr7")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 18.048336, 5.0923023)
+
+[node name="Pasillo Composite5" parent="Lv1AlterPoint/FirstFacade" unique_id=1474960699 instance=ExtResource("15_slqxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="Pasillo Composite11" parent="Lv1AlterPoint/FirstFacade" unique_id=64452023 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -5.05, 0.005)
+
+[node name="Pasillo Composite12" parent="Lv1AlterPoint/FirstFacade" unique_id=2026502966 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -5.05, 0)
+
+[node name="Pasillo Composite13" parent="Lv1AlterPoint/FirstFacade" unique_id=341116131 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 5.05, 0.005)
+
+[node name="Pasillo Composite14" parent="Lv1AlterPoint/FirstFacade" unique_id=1151443226 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 5.05, 0)
+
+[node name="SecondFacade" type="Node3D" parent="Lv1AlterPoint" unique_id=2079390113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.006004, 0, 0)
+
+[node name="PasillosAscensor" parent="Lv1AlterPoint/SecondFacade" unique_id=1651183313 instance=ExtResource("14_5pu67")]
+
+[node name="OutLockTeleporter" parent="Lv1AlterPoint/SecondFacade" unique_id=525280574 instance=ExtResource("13_bdlrj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0.116, 1.6)
+
+[node name="Pasillo Composite3" parent="Lv1AlterPoint/SecondFacade" unique_id=220342966 instance=ExtResource("3_5pu67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Pasillo Composite" parent="Lv1AlterPoint/SecondFacade" unique_id=1883420272 instance=ExtResource("14_vy7kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Pasillo Composite4" parent="Lv1AlterPoint/SecondFacade" unique_id=1100674331 instance=ExtResource("15_slqxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="Pasillo Composite5" parent="Lv1AlterPoint/SecondFacade" unique_id=87774942 instance=ExtResource("15_slqxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+
+[node name="Pasillo Composite2" parent="Lv1AlterPoint/SecondFacade" unique_id=1202952204 instance=ExtResource("16_slqxp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18, 0, 0)

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://pmqg6gnhbs03"]
+
+[ext_resource type="Texture2D" uid="uid://dpar0fmgc5bq5" path="res://3D Assets/Stairs/Edited/Edited Stairs_Image_2.jpg" id="1_i7cvc"]
+
+[resource]
+resource_name = "x0023_RISERBirch.jpg1111"
+cull_mode = 2
+albedo_color = Color(0.60784316, 0.25882354, 0.17254902, 1)
+albedo_texture = ExtResource("1_i7cvc")
+roughness = 0.6
+metadata/_gltf_primary_texture_coord = 0

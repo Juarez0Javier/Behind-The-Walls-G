@@ -1,0 +1,78 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://byl5tgkxjatlu"
+path="res://.godot/imported/elevator_front.glb-7933666103bd1d357168997bbe2608f3.scn"
+
+[deps]
+
+source_file="res://3D Assets/Elevator/elevator_front.glb"
+dest_files=["res://.godot/imported/elevator_front.glb-7933666103bd1d357168997bbe2608f3.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"doors": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/doors.tres",
+"use_external/path": "uid://djtbklmwkyhso"
+},
+"exterior": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/exterior.tres",
+"use_external/path": "uid://cwpronvjsyhgi"
+},
+"material_0": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/material_0.tres",
+"use_external/path": "uid://dg5ssyexds5c8"
+},
+"updownbutton": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/updownbutton.tres",
+"use_external/path": "uid://c8q81a6jxi8wj"
+},
+"updownbuttonbase": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/updownbuttonbase.tres",
+"use_external/path": "uid://57f6nkcccsna"
+},
+"uplight": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Elevator/Materials/uplight.tres",
+"use_external/path": "uid://cxwf6plxu1it6"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://duo2508pi8fhn"]
+
+[ext_resource type="Script" uid="uid://c05g4ihmqp2fs" path="res://Menus/Menu Principal/menu_principal.gd" id="1_t6rmb"]
+
+[node name="Menu Principal" type="Control" unique_id=1836214492]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6rmb")
+
+[node name="Title" type="Label" parent="." unique_id=948624853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 139.0
+offset_top = 78.0
+offset_right = -143.0
+offset_bottom = -480.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Behind The Walls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartBttn" type="Button" parent="." unique_id=2043455025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 139.00003
+offset_top = 387.0
+offset_right = -803.6251
+offset_bottom = -205.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.96000063, 1)
+theme_override_font_sizes/font_size = 30
+text = "Comenzar"
+
+[node name="ExitBttn" type="Button" parent="." unique_id=428277600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 139.0
+offset_top = 504.0
+offset_right = -803.6251
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.96000063, 1)
+theme_override_font_sizes/font_size = 30
+text = "Salir"
+
+[connection signal="pressed" from="StartBttn" to="." method="_on_start_bttn_pressed"]
+[connection signal="pressed" from="ExitBttn" to="." method="_on_exit_bttn_pressed"]

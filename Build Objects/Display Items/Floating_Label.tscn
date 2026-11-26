@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wsudowy7lfr1"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_si1fv"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Floating Label" type="Sprite3D" unique_id=1763800584]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_si1fv")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1672406690]
+size = Vector2i(80, 35)
+
+[node name="Label" type="Label" parent="SubViewport" unique_id=1217697530]
+offset_right = 80.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(1, 0.6875, 0.25, 1)
+theme_override_colors/font_shadow_color = Color(0.85684246, 0.51659304, 0.28378946, 1)
+theme_override_font_sizes/font_size = 24
+text = "1,70 m
+"

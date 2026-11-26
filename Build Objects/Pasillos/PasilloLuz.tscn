@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bqe0mbr2mybin"]
+
+[ext_resource type="PackedScene" uid="uid://5iel25rnfgkf" path="res://Build Objects/Pasillos/Pasillo.tscn" id="1_1xqj1"]
+[ext_resource type="PackedScene" uid="uid://jdv5m1mrb2qb" path="res://3D Assets/Lamp/Lamp.glb" id="2_h82hl"]
+
+[node name="Pasillo Composite" unique_id=948998881 instance=ExtResource("1_1xqj1")]
+
+[node name="Sketchfab_Scene" parent="." index="1" unique_id=769130433 instance=ExtResource("2_h82hl")]
+transform = Transform3D(-6.5567086e-08, 0, 1.5, 0, 1.4999999, 0, -1.5000001, 0, -6.556708e-08, 0, 3.1892335, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sketchfab_Scene" index="1" unique_id=1752811413]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -9.627908e-11, -0.028773785, 0.0022026699)
+light_energy = 10.0
+light_indirect_energy = 15.0
+shadow_enabled = true
+spot_range = 4.978867
+spot_angle = 68.365616
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_Scene/SpotLight3D" index="0" unique_id=1800619057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0257622e-08, -0.2346673)
+omni_range = 1.7573315

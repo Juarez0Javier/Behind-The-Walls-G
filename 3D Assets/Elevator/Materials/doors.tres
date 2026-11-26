@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://djtbklmwkyhso"]
+
+[ext_resource type="Texture2D" uid="uid://1t6uhdr8mecb" path="res://2D Assets/Textures/Metal Silver/Metal049A_1K-PNG_Color.png" id="1_b7ei4"]
+[ext_resource type="Texture2D" uid="uid://buuhcj7w1wesp" path="res://2D Assets/Textures/Metal Silver/Metal049A_1K-PNG_Metalness.png" id="2_0pn2k"]
+[ext_resource type="Texture2D" uid="uid://cf7p1w6xohs1m" path="res://2D Assets/Textures/Metal Silver/Metal049A_1K-PNG_Displacement.png" id="2_yuuuw"]
+[ext_resource type="Texture2D" uid="uid://ciyeln11iswcx" path="res://2D Assets/Textures/Metal Silver/Metal049A_1K-PNG_Roughness.png" id="4_0pn2k"]
+[ext_resource type="Texture2D" uid="uid://deqq82ijttgha" path="res://2D Assets/Textures/Metal Silver/Metal049A_1K-PNG_NormalGL.png" id="4_70f50"]
+
+[resource]
+resource_name = "doors"
+cull_mode = 2
+albedo_texture = ExtResource("1_b7ei4")
+metallic = 0.35
+metallic_specular = 0.2
+metallic_texture = ExtResource("2_0pn2k")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("4_0pn2k")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("4_70f50")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_yuuuw")

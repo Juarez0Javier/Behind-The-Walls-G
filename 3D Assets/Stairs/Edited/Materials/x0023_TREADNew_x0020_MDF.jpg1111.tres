@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://l5soo5qatj01"]
+
+[ext_resource type="Texture2D" uid="uid://6qmkxhvehylv" path="res://3D Assets/Stairs/Edited/Edited Stairs_Image_3.jpg" id="1_lx8a3"]
+
+[resource]
+resource_name = "x0023_TREADNew_x0020_MDF.jpg1111"
+cull_mode = 2
+albedo_color = Color(0.98039216, 0.8784314, 0.84313726, 1)
+albedo_texture = ExtResource("1_lx8a3")
+roughness = 0.6
+metadata/_gltf_primary_texture_coord = 0

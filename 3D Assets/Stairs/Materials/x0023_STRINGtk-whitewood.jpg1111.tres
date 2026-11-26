@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c8eb5bks3gf6t"]
+
+[ext_resource type="Texture2D" uid="uid://dg8bxb7u80q6" path="res://3D Assets/Stairs/Staircase_1.jpg" id="1_tvwyi"]
+
+[resource]
+resource_name = "x0023_STRINGtk-whitewood.jpg1111"
+cull_mode = 2
+albedo_color = Color(0.60784316, 0.25882354, 0.17254902, 1)
+albedo_texture = ExtResource("1_tvwyi")
+roughness = 0.6
+metadata/_gltf_primary_texture_coord = 0

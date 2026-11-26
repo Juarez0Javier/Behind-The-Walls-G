@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c53jil8sk5bei"]
+
+[ext_resource type="PackedScene" uid="uid://baogqrvg57i8c" path="res://3D Assets/Stairs/Staircase.glb" id="1_8pqte"]
+
+[node name="Sketchfab_Scene" unique_id=402222049 instance=ExtResource("1_8pqte")]
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=1402269561]
+transform = Transform3D(-1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)

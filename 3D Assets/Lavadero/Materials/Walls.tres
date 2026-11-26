@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfjpvbihe5c7f"]
+
+[ext_resource type="Texture2D" uid="uid://5a5h4nvupg2p" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Color.png" id="1_hr0dn"]
+[ext_resource type="Texture2D" uid="uid://c0uf45nf5xlkf" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_NormalGL.png" id="1_vfami"]
+[ext_resource type="Texture2D" uid="uid://dg2low5sdma7j" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Displacement.png" id="2_mvfop"]
+[ext_resource type="Texture2D" uid="uid://ldvmrwda8pnf" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Roughness.png" id="4_gjrow"]
+
+[resource]
+resource_name = "Walls"
+cull_mode = 2
+albedo_texture = ExtResource("1_hr0dn")
+roughness_texture = ExtResource("4_gjrow")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("1_vfami")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_mvfop")
+uv1_scale = Vector3(1.7, 1.7, 1.7)
+uv1_triplanar = true

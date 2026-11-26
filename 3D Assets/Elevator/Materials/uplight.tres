@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxwf6plxu1it6"]
+
+[resource]
+resource_name = "uplight"
+cull_mode = 2
+albedo_color = Color(0.15478961, 0.15478961, 0.15478961, 1)
+roughness = 0.82111454
+emission = Color(0.6183472, 0.6120592, 0.22688723, 1)

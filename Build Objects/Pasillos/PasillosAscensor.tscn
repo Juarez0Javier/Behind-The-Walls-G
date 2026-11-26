@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://xrjv6w2yafv2"]
+
+[ext_resource type="Material" uid="uid://dvsdrfk12v7jb" path="res://2D Assets/Textures/Wood Floor/WoodFloor051_1K-PNG.tres" id="1_wg3r1"]
+[ext_resource type="Material" uid="uid://cva51n6excemn" path="res://2D Assets/Textures/Plaster/DarkGreyPlaster.tres" id="2_ojou3"]
+[ext_resource type="Material" uid="uid://cc2bu6pd1fia" path="res://2D Assets/Textures/Plaster/CreamPlaster.tres" id="3_fik50"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wpmqn"]
+material = ExtResource("1_wg3r1")
+size = Vector3(8, 0.25, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4tlak"]
+size = Vector3(8, 0.25, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a5cvy"]
+material = ExtResource("2_ojou3")
+size = Vector3(8, 0.35, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xghbh"]
+material = ExtResource("3_fik50")
+size = Vector3(8, 3.25, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wg3r1"]
+size = Vector3(8.09346, 3.2648926, 0.5006542)
+
+[node name="PasillosAscensor" type="Node3D" unique_id=678358693]
+
+[node name="Base Floor2" type="MeshInstance3D" parent="." unique_id=613982436]
+transform = Transform3D(0.99999684, 0, 0, 0, 1, 0, 0, 0, 0.99999684, 0, -0.125, 0)
+mesh = SubResource("BoxMesh_wpmqn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Base Floor2" unique_id=907604309]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base Floor2/StaticBody3D" unique_id=348809601]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_4tlak")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1649065862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.425, 0)
+mesh = SubResource("BoxMesh_a5cvy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2116916095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, -2.245)
+mesh = SubResource("BoxMesh_xghbh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2" unique_id=922905806]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D" unique_id=1469998104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013587952, 0.006958008, 0.0024614334)
+shape = SubResource("BoxShape3D_wg3r1")

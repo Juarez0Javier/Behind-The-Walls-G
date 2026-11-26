@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://ca8gd5k6x36uc"]
+
+[ext_resource type="PackedScene" uid="uid://cywfv8i530ish" path="res://Characters/PC.tscn" id="1_80c3a"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="2_d17em"]
+[ext_resource type="PackedScene" uid="uid://bj3prlvqr8bjq" path="res://Characters/Player_Model.tscn" id="3_1cwr0"]
+[ext_resource type="PackedScene" uid="uid://c17q3vhdk5vn6" path="res://Build Objects/Display Items/Puerta_Display.tscn" id="4_46faf"]
+[ext_resource type="PackedScene" uid="uid://bjmdavxc0ogxk" path="res://Build Objects/Display Items/Planta_Display.tscn" id="5_threo"]
+[ext_resource type="PackedScene" uid="uid://d16pmur0d20io" path="res://Build Objects/Display Items/Ascensor_Display.tscn" id="6_s2wwn"]
+[ext_resource type="PackedScene" uid="uid://bxcobuthjl0vx" path="res://Build Objects/Display Items/Pasillo_Display.tscn" id="7_bia53"]
+[ext_resource type="PackedScene" uid="uid://td65or6hsrqs" path="res://Build Objects/Display Items/Escalera_Display.tscn" id="8_ta15a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_80c3a"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_d17em"]
+sky_material = SubResource("ProceduralSkyMaterial_80c3a")
+
+[sub_resource type="Environment" id="Environment_1cwr0"]
+background_mode = 2
+sky = SubResource("Sky_d17em")
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fikvc"]
+albedo_color = Color(0.41, 0.41, 0.41, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kye67"]
+material = SubResource("StandardMaterial3D_fikvc")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jvwkr"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3rco7"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_n3fwk"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kye67"]
+
+[node name="Node3D" type="Node3D" unique_id=1273256652]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1820983006]
+environment = SubResource("Environment_1cwr0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=548691068]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Wall" type="MeshInstance3D" parent="." unique_id=1195789082]
+transform = Transform3D(-1.1068851e-06, 1.178487, 0, -25.32258, -5.15133e-08, 0, 0, 0, 26.869831, -13.143084, 11.930574, 0.02812624)
+mesh = SubResource("BoxMesh_kye67")
+
+[node name="PC" parent="." unique_id=942135061 instance=ExtResource("1_80c3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.47271204, 0, 0.72195196)
+
+[node name="Jugador" parent="." unique_id=535711319 instance=ExtResource("3_1cwr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9132214, 0.8881378, 1.608113)
+
+[node name="Floating Label3" parent="Jugador" unique_id=903881665 instance=ExtResource("2_d17em")]
+transform = Transform3D(0.9995799, 0.0264456, -0.011836097, -0.026370605, 0.99963105, 0.006447872, 0.012002254, -0.006133036, 0.9999088, 0.9688721, -0.42570472, -0.0068416595)
+texture = SubResource("ViewportTexture_jvwkr")
+
+[node name="SubViewport" parent="Jugador/Floating Label3" index="0" unique_id=1672406690]
+size = Vector2i(95, 35)
+
+[node name="Label" parent="Jugador/Floating Label3/SubViewport" index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Jugador
+"
+
+[node name="Floating Label2" parent="Jugador" unique_id=1866130792 instance=ExtResource("2_d17em")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 1.1792711, -0.040388107)
+texture = SubResource("ViewportTexture_3rco7")
+
+[node name="Label" parent="Jugador/Floating Label2/SubViewport" parent_id_path=PackedInt32Array(1866130792, 1672406690) index="0" unique_id=1217697530]
+text = "0,35 m
+"
+
+[node name="Floating Label" parent="Jugador" unique_id=733221715 instance=ExtResource("2_d17em")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.31271267, 0.037964344, 0.8232336)
+texture = SubResource("ViewportTexture_n3fwk")
+
+[node name="Base Floor" type="MeshInstance3D" parent="." unique_id=1179035655]
+transform = Transform3D(25, 0, 0, 0, 0.075, 0, 0, 0, 25, 0, 0.038, 0)
+mesh = SubResource("BoxMesh_kye67")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Base Floor" unique_id=1706515628]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base Floor/StaticBody3D" unique_id=1805791944]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_kye67")
+
+[node name="Door Display" parent="." unique_id=1157004631 instance=ExtResource("4_46faf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.351803, 0.038, -2.510241)
+
+[node name="Planta Display" parent="." unique_id=134034857 instance=ExtResource("5_threo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.117456, 0, 1.1523066)
+
+[node name="Ascensor Display" parent="." unique_id=10741417 instance=ExtResource("6_s2wwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.776855, 0, -6.8337007)
+
+[node name="Pasillo Display" parent="." unique_id=1940622527 instance=ExtResource("7_bia53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9570055, 0, -0.4689293)
+
+[node name="Escalera Display" parent="." unique_id=1659892581 instance=ExtResource("8_ta15a")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -10.104019, 0.07898569, -6.8514194)
+
+[node name="Ruler" type="Node3D" parent="." unique_id=515906912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.030078, 3.8933532, -11.929995)
+
+[editable path="Jugador/Floating Label3"]
+[editable path="Jugador/Floating Label2"]

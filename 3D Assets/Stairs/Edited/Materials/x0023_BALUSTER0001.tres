@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://covhrnlpm4chv"]
+
+[resource]
+resource_name = "x0023_BALUSTER0001"
+cull_mode = 2
+albedo_color = Color(0.34, 0.18699999, 0.13599999, 1)
+roughness = 0.6

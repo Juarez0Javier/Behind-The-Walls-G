@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bxcobuthjl0vx"]
+
+[ext_resource type="PackedScene" uid="uid://5iel25rnfgkf" path="res://Build Objects/Pasillos/Pasillo.tscn" id="1_mvf11"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="1_qfw7k"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mvf11"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hsggj"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rqb0u"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Pasillo Display" type="Node3D" unique_id=1940622527]
+
+[node name="Pasillo Composite" parent="." unique_id=948998881 instance=ExtResource("1_mvf11")]
+
+[node name="Floating Label3" parent="." unique_id=1763800584 instance=ExtResource("1_qfw7k")]
+transform = Transform3D(0.9998949, 0.013214879, -0.0059394725, -0.013196129, 0.9999077, 0.0031849307, 0.005981015, -0.0031062162, 0.9999771, 1.542645, 0.41833317, 0.15127349)
+texture = SubResource("ViewportTexture_mvf11")
+
+[node name="Label" parent="Floating Label3/SubViewport" parent_id_path=PackedInt32Array(1763800584, 1672406690) index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Pasillo
+"
+horizontal_alignment = 1
+
+[node name="Floating Label2" parent="." unique_id=1646160542 instance=ExtResource("1_qfw7k")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -0.7467532, 2.8518674, 0.040139675)
+texture = SubResource("ViewportTexture_hsggj")
+
+[node name="Label" parent="Floating Label2/SubViewport" parent_id_path=PackedInt32Array(1646160542, 1672406690) index="0" unique_id=1217697530]
+text = "4,00 m
+"
+
+[node name="Floating Label" parent="." unique_id=1625897353 instance=ExtResource("1_qfw7k")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.45189333, 2.1620002, 1.2259467)
+texture = SubResource("ViewportTexture_rqb0u")
+
+[node name="Label" parent="Floating Label/SubViewport" parent_id_path=PackedInt32Array(1625897353, 1672406690) index="0" unique_id=1217697530]
+text = "3,25 m
+"
+
+[editable path="Floating Label3"]
+[editable path="Floating Label2"]
+[editable path="Floating Label"]

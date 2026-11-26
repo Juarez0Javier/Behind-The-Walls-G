@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cy4dlgii8rq3p"]
+
+[ext_resource type="Script" uid="uid://bvsfsjeqojs3g" path="res://Build Objects/Interactable/Teleporter/lv_teleporter.gd" id="1_1d6cq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8iemb"]
+size = Vector3(0, 3, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hybr"]
+albedo_color = Color(0.24919997, 0.75115997, 0.89, 1)
+emission_enabled = true
+emission = Color(0.312, 0.7430666, 0.8, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_si1fv"]
+material = SubResource("StandardMaterial3D_7hybr")
+inner_radius = 0.475
+outer_radius = 0.303
+
+[node name="LVTeleporter" type="Area3D" unique_id=749303935]
+script = ExtResource("1_1d6cq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1984334889]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.5409691, 0)
+shape = SubResource("BoxShape3D_8iemb")
+debug_color = Color(0.72, 0.10799999, 0.4445998, 0.81960785)
+
+[node name="Front Indicator" type="MeshInstance3D" parent="." unique_id=374331720]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 1.5, -0.5)
+visible = false
+mesh = SubResource("TorusMesh_si1fv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

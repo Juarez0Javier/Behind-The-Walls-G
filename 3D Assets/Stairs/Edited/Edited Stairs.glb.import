@@ -1,0 +1,88 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://rm83mve8khtt"
+path="res://.godot/imported/Edited Stairs.glb-e099ef50ff0245c91905102d9587980d.scn"
+
+[deps]
+
+source_file="res://3D Assets/Stairs/Edited/Edited Stairs.glb"
+dest_files=["res://.godot/imported/Edited Stairs.glb-e099ef50ff0245c91905102d9587980d.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"x0023_BALUSTER0001": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_BALUSTER0001.tres",
+"use_external/path": "uid://covhrnlpm4chv"
+},
+"x0023_BOTTOMRAILbig-oaktex.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_BOTTOMRAILbig-oaktex.jpg1111.tres",
+"use_external/path": "uid://iv2gh0n5tfnd"
+},
+"x0023_HANDRAILbig-oaktex.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_HANDRAILbig-oaktex.jpg1111.tres",
+"use_external/path": "uid://dbq4ycl5r5xlc"
+},
+"x0023_POSTbig-oaktex.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_POSTbig-oaktex.jpg1111.tres",
+"use_external/path": "uid://cjvitr0qigbdx"
+},
+"x0023_POSTtk-whitewood.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_POSTtk-whitewood.jpg1111.tres",
+"use_external/path": "uid://bytneoqqtd5yd"
+},
+"x0023_RISERBirch.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_RISERBirch.jpg1111.tres",
+"use_external/path": "uid://pmqg6gnhbs03"
+},
+"x0023_STRINGtk-whitewood.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_STRINGtk-whitewood.jpg1111.tres",
+"use_external/path": "uid://drq6alkuv4p1i"
+},
+"x0023_TREADNew_x0020_MDF.jpg1111": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3D Assets/Stairs/Edited/Materials/x0023_TREADNew_x0020_MDF.jpg1111.tres",
+"use_external/path": "uid://l5soo5qatj01"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

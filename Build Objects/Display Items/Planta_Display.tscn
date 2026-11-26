@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bjmdavxc0ogxk"]
+
+[ext_resource type="PackedScene" uid="uid://kob8qet323yl" path="res://Build Objects/Planta.tscn" id="1_ni8w3"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="1_onw6i"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j081j"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pud80"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_eata7"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Planta Display" type="Node3D" unique_id=134034857]
+
+[node name="Planta Mesh" parent="." unique_id=1163216953 instance=ExtResource("1_ni8w3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Nombre" parent="." unique_id=1763800584 instance=ExtResource("1_onw6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.619, 0.42535233, 0)
+texture = SubResource("ViewportTexture_j081j")
+
+[node name="Label" parent="Nombre/SubViewport" parent_id_path=PackedInt32Array(1763800584, 1672406690) index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Planta
+"
+horizontal_alignment = 1
+
+[node name="Alto" parent="." unique_id=386240798 instance=ExtResource("1_onw6i")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -0.08930218, 0.81441593, 0.82474446)
+texture = SubResource("ViewportTexture_pud80")
+
+[node name="Label" parent="Alto/SubViewport" parent_id_path=PackedInt32Array(386240798, 1672406690) index="0" unique_id=1217697530]
+text = "1,00 m
+"
+
+[node name="Ancho" parent="." unique_id=495849094 instance=ExtResource("1_onw6i")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.10715687, 1.3914534, -0.016358972)
+texture = SubResource("ViewportTexture_eata7")
+
+[node name="Label" parent="Ancho/SubViewport" parent_id_path=PackedInt32Array(495849094, 1672406690) index="0" unique_id=1217697530]
+text = "0,70 m
+"
+
+[editable path="Nombre"]
+[editable path="Alto"]
+[editable path="Ancho"]

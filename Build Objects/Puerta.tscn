@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d130pihie6agv"]
+
+[ext_resource type="PackedScene" uid="uid://nnufijuwhc52" path="res://3D Assets/Door/Door.glb" id="1_6qpga"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kye67"]
+size = Vector3(0.10913086, 2.0965576, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qpga"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_80c3a"]
+material = SubResource("StandardMaterial3D_6qpga")
+uv2_padding = 0.91
+size = Vector3(0.14290771, 2.1713867, 1.0924377)
+
+[node name="Puerta" type="StaticBody3D" unique_id=1930681942]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=290058116]
+transform = Transform3D(1, 0, 0, 0, 0.9727612, 0, 0, 0, 1.0557848, 0, 0.06180691, 0)
+shape = SubResource("BoxShape3D_kye67")
+
+[node name="Door" parent="." unique_id=1977120202 instance=ExtResource("1_6qpga")]
+transform = Transform3D(-4.1534837e-10, 0, 0.009, 0, 0.00875485, 0, -0.009502063, 0, -3.9340248e-10, 0.03022933, -0.9868418, -0.00040908856)
+
+[node name="BackMesh" type="MeshInstance3D" parent="." unique_id=1005952107]
+transform = Transform3D(1, 0, 0, 0, 0.9727612, 0, 0, 0, 1.0557848, 0.07, 0.054688364, 0.022818178)
+mesh = SubResource("BoxMesh_80c3a")

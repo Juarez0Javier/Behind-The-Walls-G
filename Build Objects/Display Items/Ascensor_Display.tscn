@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d16pmur0d20io"]
+
+[ext_resource type="PackedScene" uid="uid://dywhbf6okl5rg" path="res://Build Objects/Ascensor.tscn" id="1_1iog1"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="1_75xoo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1iog1"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2g04s"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3b20j"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Ascensor Display" type="Node3D" unique_id=10741417]
+
+[node name="Ascensor Mesh" parent="." unique_id=216551906 instance=ExtResource("1_1iog1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+
+[node name="Nombre" parent="." unique_id=1763800584 instance=ExtResource("1_75xoo")]
+transform = Transform3D(0.9998949, 0.013214879, -0.0059394725, -0.013196129, 0.9999077, 0.0031849307, 0.005981015, -0.0031062162, 0.9999771, 1.1666464, 0.6261755, 0.04674816)
+texture = SubResource("ViewportTexture_1iog1")
+
+[node name="SubViewport" parent="Nombre" index="0" unique_id=1672406690]
+size = Vector2i(110, 35)
+
+[node name="Label" parent="Nombre/SubViewport" index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Ascensor
+"
+horizontal_alignment = 1
+
+[node name="Alto" parent="." unique_id=1047566208 instance=ExtResource("1_75xoo")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.21980989, 1.3834062, 1.2223997)
+texture = SubResource("ViewportTexture_2g04s")
+
+[node name="Label" parent="Alto/SubViewport" parent_id_path=PackedInt32Array(1047566208, 1672406690) index="0" unique_id=1217697530]
+text = "2,50 m
+"
+
+[node name="Ancho" parent="." unique_id=940071421 instance=ExtResource("1_75xoo")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -0.07505, 2.7973146, 0.01516819)
+texture = SubResource("ViewportTexture_3b20j")
+
+[node name="Label" parent="Ancho/SubViewport" parent_id_path=PackedInt32Array(940071421, 1672406690) index="0" unique_id=1217697530]
+text = "1,50 m
+"
+
+[editable path="Nombre"]
+[editable path="Alto"]
+[editable path="Ancho"]

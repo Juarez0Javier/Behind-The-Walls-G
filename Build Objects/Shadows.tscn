@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ki1024e3gyrd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fe1il"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.8784314)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kye67"]
+material = SubResource("StandardMaterial3D_fe1il")
+size = Vector3(10, 6.7623672, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61fd0"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_61fd0"]
+material = SubResource("StandardMaterial3D_61fd0")
+size = Vector3(10, 1.0421944, 10)
+
+[node name="Shadows" type="Node3D" unique_id=1976023083]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=303620149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("BoxMesh_kye67")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=589150004]
+mesh = SubResource("BoxMesh_kye67")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=622049073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_kye67")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=242729970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.7766247, 0)
+mesh = SubResource("BoxMesh_61fd0")

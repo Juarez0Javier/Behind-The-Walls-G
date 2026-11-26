@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c17q3vhdk5vn6"]
+
+[ext_resource type="PackedScene" uid="uid://d130pihie6agv" path="res://Build Objects/Puerta.tscn" id="1_euj8r"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="1_j6qmy"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_57x6q"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0oudr"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jcbta"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Door Display" type="Node3D" unique_id=1157004631]
+
+[node name="Door Mesh" parent="." unique_id=1005952107 instance=ExtResource("1_euj8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148, 1, 0)
+
+[node name="Floating Label3" parent="." unique_id=1763800584 instance=ExtResource("1_j6qmy")]
+transform = Transform3D(0.9998949, 0.013214879, -0.0059394725, -0.013196129, 0.9999077, 0.0031849307, 0.005981015, -0.0031062162, 0.9999771, 0.56942225, 0.48521852, -0.04076767)
+texture = SubResource("ViewportTexture_57x6q")
+
+[node name="Label" parent="Floating Label3/SubViewport" parent_id_path=PackedInt32Array(1763800584, 1672406690) index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Puerta
+"
+
+[node name="Floating Label2" parent="." unique_id=734404520 instance=ExtResource("1_j6qmy")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.21476412, 2.3778021, -0.05607438)
+texture = SubResource("ViewportTexture_0oudr")
+
+[node name="Label" parent="Floating Label2/SubViewport" parent_id_path=PackedInt32Array(734404520, 1672406690) index="0" unique_id=1217697530]
+text = "0,90 m
+"
+
+[node name="Floating Label" parent="." unique_id=1633585482 instance=ExtResource("1_j6qmy")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.19690943, 1.2210513, 1.011488)
+texture = SubResource("ViewportTexture_jcbta")
+
+[node name="Label" parent="Floating Label/SubViewport" parent_id_path=PackedInt32Array(1633585482, 1672406690) index="0" unique_id=1217697530]
+text = "2,00 m
+"
+
+[editable path="Floating Label3"]
+[editable path="Floating Label2"]
+[editable path="Floating Label"]

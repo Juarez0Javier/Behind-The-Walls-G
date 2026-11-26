@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cp0xdg46mame4"]
+
+[ext_resource type="PackedScene" uid="uid://coi83h41tuug1" path="res://Build Objects/Pasillos/Bifurcacion.tscn" id="1_1yonw"]
+[ext_resource type="PackedScene" uid="uid://d130pihie6agv" path="res://Build Objects/Puerta.tscn" id="2_k74pd"]
+[ext_resource type="PackedScene" uid="uid://jdv5m1mrb2qb" path="res://3D Assets/Lamp/Lamp.glb" id="2_w5m0a"]
+
+[node name="Bifurcacion" unique_id=1329891468 instance=ExtResource("1_1yonw")]
+
+[node name="Sketchfab_Scene" parent="." index="5" unique_id=769130433 instance=ExtResource("2_w5m0a")]
+transform = Transform3D(1.5, 0, 0, 0, 1.4999999, 0, 0, 0, 1.4999999, 0, 3.1892335, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Sketchfab_Scene" index="1" unique_id=145472638]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, -9.627908e-11, -0.028773785, 0.0022026699)
+light_energy = 10.0
+light_indirect_energy = 15.0
+shadow_enabled = true
+spot_range = 4.978867
+spot_angle = 68.365616
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Sketchfab_Scene/SpotLight3D" index="0" unique_id=1428186750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0257622e-08, -0.2346673)
+omni_range = 1.7573315
+
+[node name="Door Mesh2" parent="." index="6" unique_id=1005952107 instance=ExtResource("2_k74pd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1, 2)

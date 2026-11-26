@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbedf6v4h1x4v"]
+
+[ext_resource type="Texture2D" uid="uid://5a5h4nvupg2p" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Color.png" id="Color"]
+[ext_resource type="Texture2D" uid="uid://dg2low5sdma7j" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Displacement.png" id="Displacement"]
+[ext_resource type="Texture2D" uid="uid://c0uf45nf5xlkf" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_NormalGL.png" id="NormalGL"]
+[ext_resource type="Texture2D" uid="uid://ldvmrwda8pnf" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Roughness.png" id="Roughness"]
+
+[resource]
+albedo_texture = ExtResource("Color")
+roughness_texture = ExtResource("Roughness")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("NormalGL")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("Displacement")
+uv1_scale = Vector3(0.18, 0.18, 0.18)
+uv1_triplanar = true
+uv2_world_triplanar = true

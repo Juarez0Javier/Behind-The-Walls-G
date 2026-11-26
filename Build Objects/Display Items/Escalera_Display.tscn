@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://td65or6hsrqs"]
+
+[ext_resource type="PackedScene" uid="uid://dogwgenkwokj7" path="res://Build Objects/Escalera.tscn" id="1_2b4xi"]
+[ext_resource type="PackedScene" uid="uid://wsudowy7lfr1" path="res://Build Objects/Display Items/Floating_Label.tscn" id="1_rxnl1"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2b4xi"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_m18de"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0608j"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Escalera Display" type="Node3D" unique_id=1659892581]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Escalera Composite" parent="." unique_id=1164645590 instance=ExtResource("1_2b4xi")]
+
+[node name="Floating Label3" parent="." unique_id=1763800584 instance=ExtResource("1_rxnl1")]
+transform = Transform3D(0.9998949, 0.013214879, -0.0059394725, -0.013196129, 0.9999077, 0.0031849307, 0.005981015, -0.0031062162, 0.9999771, -1.4393368, 3.6911583, -0.16111052)
+texture = SubResource("ViewportTexture_2b4xi")
+
+[node name="SubViewport" parent="Floating Label3" index="0" unique_id=1672406690]
+size = Vector2i(100, 35)
+
+[node name="Label" parent="Floating Label3/SubViewport" index="0" unique_id=1217697530]
+theme_override_colors/font_color = Color(0.74305147, 0.7359831, 0.93622994, 1)
+theme_override_colors/font_shadow_color = Color(0.30934596, 0.6348983, 0.9307563, 1)
+text = "Escalera
+"
+horizontal_alignment = 1
+
+[node name="Floating Label2" parent="." unique_id=1281899516 instance=ExtResource("1_rxnl1")]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.68260384, 5.2869244, -0.063623965)
+texture = SubResource("ViewportTexture_m18de")
+
+[node name="Label" parent="Floating Label2/SubViewport" parent_id_path=PackedInt32Array(1281899516, 1672406690) index="0" unique_id=1217697530]
+text = "6,40 m
+"
+
+[node name="Floating Label" parent="." unique_id=181340177 instance=ExtResource("1_rxnl1")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.49666387, 3.482294, -2.0669236)
+texture = SubResource("ViewportTexture_0608j")
+
+[node name="Label" parent="Floating Label/SubViewport" parent_id_path=PackedInt32Array(181340177, 1672406690) index="0" unique_id=1217697530]
+text = "4,55 m
+"
+
+[editable path="Floating Label3"]
+[editable path="Floating Label2"]
+[editable path="Floating Label"]

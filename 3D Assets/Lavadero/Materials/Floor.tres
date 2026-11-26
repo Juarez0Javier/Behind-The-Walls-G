@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cdpcd1810280q"]
+
+[ext_resource type="Texture2D" uid="uid://dc7pf77cisld" path="res://2D Assets/Textures/CheckerFloor/Tiles012_1K-PNG_Color.png" id="1_ylrps"]
+[ext_resource type="Texture2D" uid="uid://dg2low5sdma7j" path="res://2D Assets/Textures/WhiteTiles/Tiles036_1K-PNG_Displacement.png" id="2_k6d2b"]
+[ext_resource type="Texture2D" uid="uid://dcfg3e0pepdbn" path="res://2D Assets/Textures/CheckerFloor/Tiles012_1K-PNG_NormalGL.png" id="3_k6d2b"]
+[ext_resource type="Texture2D" uid="uid://cd3gaol6qw5am" path="res://2D Assets/Textures/CheckerFloor/Tiles012_1K-PNG_Roughness.png" id="4_d61d0"]
+
+[resource]
+resource_name = "Floor"
+cull_mode = 2
+albedo_texture = ExtResource("1_ylrps")
+roughness_texture = ExtResource("4_d61d0")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_k6d2b")
+heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("2_k6d2b")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+uv1_world_triplanar = true
