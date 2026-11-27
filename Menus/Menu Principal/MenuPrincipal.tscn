@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_t6rmb")
 
 [node name="Font" type="Sprite2D" parent="." unique_id=1083695169]
-position = Vector2(578.5, 320.5)
-scale = Vector2(0.61406255, 0.6287037)
+position = Vector2(576, 324.50003)
+scale = Vector2(0.6, 0.600926)
 texture = ExtResource("2_uy1eu")
 
 [node name="Title" type="Label" parent="." unique_id=948624853]
@@ -30,6 +30,8 @@ offset_bottom = -365.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.826936, 3.080368e-06, 0.5213295, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_4afqc")
 theme_override_font_sizes/font_size = 90
 text = "Behind 
@@ -50,6 +52,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.96000063, 1)
 theme_override_colors/font_color = Color(0.58430606, 2.435416e-05, 0.4427393, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_4afqc")
 theme_override_font_sizes/font_size = 35
 text = "Comenzar"
@@ -67,6 +71,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.96000063, 1)
 theme_override_colors/font_color = Color(0.58431375, 0, 0.44313726, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("3_4afqc")
 theme_override_font_sizes/font_size = 30
 text = "Salir"
